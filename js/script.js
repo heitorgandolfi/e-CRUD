@@ -1,5 +1,6 @@
 const newClient = document.querySelector(".new__client");
 const modal = document.querySelector(".modal");
+const tableClient = document.querySelector("#clients__table>tbody");
 
 const form = document.querySelector(".form");
 const saveBtn = document.querySelector(".save__client");
@@ -14,16 +15,6 @@ const clientValue = document.querySelector(".value");
 const clientDate = document.querySelector(".date");
 
 // Funções
-
-const tempClients = {
-    name: "Juve",
-    CPF: "46729111879",
-    telephone: "16991290513",
-    email: "heitor@gmail.com",
-    city: "Ribeirão Preto",
-    value: 450,
-    date: "15/12/12"
-}
 
 // CRUD
 
@@ -58,7 +49,7 @@ const isValidFields = () => {
 
 const closeModal = () => {
     clearFields();
-    modal.style.display = "none"
+    modal.style.display = "none";
 }
 
 clearFields = () => {
@@ -69,7 +60,7 @@ const saveClient = () => {
     if (isValidFields()) {
         const client = {
             name: clientName.value,
-            CPF: clientCpf.value,
+            cpf: clientCpf.value,
             telephone: clientTel.value,
             email: clientEmail.value,
             city: clientCity.value,
@@ -80,6 +71,31 @@ const saveClient = () => {
         closeModal();
     }
 }
+
+const createRow = (client) => {
+    const newRow = document.createElement("tr");
+    newRow.innerHTML = `
+    <td>${client.name}</td>
+    <td>${client.cpf}</td>
+    <td>${client.telephone}</td>
+    <td>${client.email}</td>
+    <td>${client.city}/td>
+    <td>${client.value}</td>
+    <td>${client.date}</td>
+    <td>
+        <button class="edit__client">Editar</button> |
+        <button class="delete__client">Excluir</button>
+    </td>
+ `
+    tableClient.appendChild(newRow);
+}
+
+const updatTable = () => {
+    const listClients = readClient();
+    listClients.forEach(createRow);
+}
+
+updatTable()
 
 // Eventos
 
