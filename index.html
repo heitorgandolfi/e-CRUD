@@ -5,13 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Clients Control</title>
 </head>
 
 <body>
 
-    Hello world
+    <header class="header">
+        <h1>Controle de Clientela</h1>
+    </header>
 
+    <main>
+        <article>
+            <button class="new__client">Cadastrar cliente</button>
+            <table id="clients__table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Cidade</th>
+                        <th>Valor</th>
+                        <th>Vencimento</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Heitor Gandolfi</td>
+                        <td>467.291.118-79</td>
+                        <td>(16) 99129-0513</td>
+                        <td>heitor@gmail.com</td>
+                        <td>Ribeirao Preto</td>
+                        <td>R$ 450,90</td>
+                        <td>15/02/2023</td>
+                        <td><button class="edit__client">Editar</button> | <button class="delete__client">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>Laura</td>
+                        <td>222.124.854-00</td>
+                        <td>(12) 94129-0544</td>
+                        <td>laura@gmail.com</td>
+                        <td>Jacareí</td>
+                        <td>R$ 150,90</td>
+                        <td>21/10/2023</td>
+                        <td><button class="edit__client">Editar</button> | <button class="delete__client">Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
