@@ -19,6 +19,11 @@
 
 /* MAIN */
 
+article.active,
+.header.active {
+    filter: blur(5px);
+}
+
 article {
     position: relative;
     display: flex;

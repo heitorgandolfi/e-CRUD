@@ -1,3 +1,6 @@
+const article = document.querySelector(".article");
+const header = document.querySelector(".header");
+
 const newClient = document.querySelector(".new__client");
 const modal = document.querySelector(".modal");
 const tableBtn = document.querySelector("#clients__table>tbody");
@@ -49,11 +52,15 @@ const isValidFields = () => {
 
 const openModal = () => {
     modal.style.display = "block";
+    article.classList.toggle("active");
+    header.classList.toggle("active");
 }
 
 const closeModal = () => {
     clearFields();
     modal.style.display = "none";
+    article.classList.toggle("active");
+    header.classList.toggle("active");
 }
 
 clearFields = () => {
