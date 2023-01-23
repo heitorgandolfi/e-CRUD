@@ -1,6 +1,7 @@
 const newClient = document.querySelector(".new__client");
 const modal = document.querySelector(".modal");
 const tableClient = document.querySelector("#clients__table>tbody");
+const rows = document.querySelectorAll("#clients__table>tbody tr")
 
 const form = document.querySelector(".form");
 const saveBtn = document.querySelector(".save__client");
@@ -79,8 +80,8 @@ const createRow = (client) => {
     <td>${client.cpf}</td>
     <td>${client.telephone}</td>
     <td>${client.email}</td>
-    <td>${client.city}/td>
-    <td>${client.value}</td>
+    <td>${client.city}</td>
+    <td>R$ ${client.value}</td>
     <td>${client.date}</td>
     <td>
         <button class="edit__client">Editar</button> |
@@ -90,8 +91,13 @@ const createRow = (client) => {
     tableClient.appendChild(newRow);
 }
 
+const clearTable = () => {
+    rows.forEach((row) => row.parentNode.removeChild(row))
+}
+
 const updatTable = () => {
     const listClients = readClient();
+    clearTable()
     listClients.forEach(createRow);
 }
 
