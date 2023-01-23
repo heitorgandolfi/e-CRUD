@@ -27,7 +27,7 @@
     <main>
         <article>
             <button class="new__client">Cadastrar cliente</button>
-            <h5>Número de clientes:</h5>
+            <!-- <h5>Número de clientes:</h5> -->
             <table id="clients__table">
                 <thead>
                     <tr>
@@ -41,34 +41,7 @@
                         <th>Ação</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- <tr>
-                        <td>Heitor Gandolfi</td>
-                        <td>467.291.118-79</td>
-                        <td>(16) 99129-0513</td>
-                        <td>heitor@gmail.com</td>
-                        <td>Ribeirao Preto</td>
-                        <td>R$ 450,90</td>
-                        <td>15/02/2023</td>
-                        <td>
-                            <button class="edit__client">Editar</button> |
-                            <button class="delete__client">Excluir</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Laura</td>
-                        <td>222.124.854-00</td>
-                        <td>(12) 94129-0544</td>
-                        <td>laura@gmail.com</td>
-                        <td>Jacareí</td>
-                        <td>R$ 150,90</td>
-                        <td>21/10/2023</td>
-                        <td>
-                            <button class="edit__client">Editar</button> |
-                            <button class="delete__client">Excluir</button>
-                        </td>
-                    </tr> -->
-                </tbody>
+                <tbody></tbody>
             </table>
         </article>
 
@@ -77,12 +50,12 @@
                 <h3>Preenches dados</h3>
             </header>
             <form class="form">
-                <input class="name modal__field" type="text" placeholder="Nome" required>
+                <input class="name modal__field" type="text"  data-index="new" placeholder="Nome" required>
                 <input class="cpf modal__field" type="text" placeholder="CPF">
                 <input class="tel modal__field" type="tel" placeholder="Telefone" required>
                 <input class="email modal__field" type="email" placeholder="Email">
                 <input class="city modal__field" type="text" placeholder="Cidade">
-                <input class="value modal__field" type="number" placeholder="Valor" required>
+                <input class="value modal__field" type="text" placeholder="Valor" required>
                 <input class="date modal__field" type="date" placeholder="Vencimento" required>
             </form>
             <div>

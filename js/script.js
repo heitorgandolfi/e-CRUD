@@ -1,7 +1,6 @@
 const newClient = document.querySelector(".new__client");
 const modal = document.querySelector(".modal");
-const tableClient = document.querySelector("#clients__table>tbody");
-const rows = document.querySelectorAll("#clients__table>tbody tr")
+const tableBtn = document.querySelector("#clients__table>tbody");
 
 const form = document.querySelector(".form");
 const saveBtn = document.querySelector(".save__client");
@@ -48,6 +47,10 @@ const isValidFields = () => {
 
 // Layout Interact
 
+const openModal = () => {
+    modal.style.display = "block";
+}
+
 const closeModal = () => {
     clearFields();
     modal.style.display = "none";
@@ -68,12 +71,20 @@ const saveClient = () => {
             value: clientValue.value,
             date: clientDate.value
         }
-        createClient(client);
-        closeModal();
+        const index = document.querySelector(".name").dataset.index;
+        if (index == "new") {
+            createClient(client);
+            updateTable();
+            closeModal();
+        } else {
+            updateClient(index, client);
+            updateTable();
+            closeModal();
+        }
     }
 }
 
-const createRow = (client) => {
+const createRow = (client, index) => {
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
     <td>${client.name}</td>
@@ -84,31 +95,64 @@ const createRow = (client) => {
     <td>R$ ${client.value}</td>
     <td>${client.date}</td>
     <td>
-        <button class="edit__client">Editar</button> |
-        <button class="delete__client">Excluir</button>
+        <button class="edit__client" type="button" data-action="edit-${index}">Editar</button> |
+        <button class="delete__client" type="button" data-action="delete-${index}">Excluir</button>
     </td>
  `
+    const tableClient = document.querySelector("#clients__table>tbody");
     tableClient.appendChild(newRow);
 }
 
 const clearTable = () => {
-    rows.forEach((row) => row.parentNode.removeChild(row))
+    const rows = document.querySelectorAll("#clients__table>tbody tr");
+    rows.forEach(row => row.parentNode.removeChild(row));
 }
 
-const updatTable = () => {
+const updateTable = () => {
     const listClients = readClient();
-    clearTable()
+    clearTable();
     listClients.forEach(createRow);
 }
 
-updatTable()
+const fillFields = (client) => {
+    clientName.value = client.name
+    clientCpf.value = client.cpf
+    clientTel.value = client.telephone
+    clientEmail.value = client.email
+    clientCity.value = client.city
+    clientValue.value = client.value
+    clientDate.value = client.date
+    clientName.dataset.index = client.index
+}
+
+const editClient = (index) => {
+    const client = readClient()[index];
+    client.index = index;
+    fillFields(client);
+    openModal()
+}
+
+const editDelete = (e) => {
+    if (e.target.type == "button") {
+        const [action, index] = e.target.dataset.action.split("-")
+
+        if (action == "edit") {
+            editClient(index)
+        } else {
+            console.log("deletando")
+        }
+
+    }
+}
+
+updateTable();
 
 // Eventos
 
-newClient.addEventListener("click", () => {
-    modal.style.display = "block"
-});
+newClient.addEventListener("click", openModal);
 
-saveBtn.addEventListener("click", saveClient)
+saveBtn.addEventListener("click", saveClient);
 
 closeBtn.addEventListener("click", closeModal);
+
+tableBtn.addEventListener("click", editDelete);
