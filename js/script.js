@@ -69,6 +69,8 @@ clearFields = () => {
 
 const saveClient = () => {
     if (isValidFields()) {
+        let enUsDate = clientDate.value;
+        let ptBrDate = enUsDate.split("-").reverse().join("/");
         const client = {
             name: clientName.value,
             cpf: clientCpf.value,
@@ -76,7 +78,7 @@ const saveClient = () => {
             email: clientEmail.value,
             city: clientCity.value,
             value: clientValue.value,
-            date: clientDate.value
+            date: ptBrDate
         }
         const index = document.querySelector(".name").dataset.index;
         if (index == "new") {
