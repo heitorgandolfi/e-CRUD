@@ -27,6 +27,7 @@
     <main>
         <article>
             <button class="new__client">Cadastrar cliente</button>
+            <h5>Número de clientes:</h5>
             <table id="clients__table">
                 <thead>
                     <tr>
@@ -75,20 +76,19 @@
             <header class="modal__header">
                 <h3>Preenches dados</h3>
             </header>
-            <form>
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="CPF">
-                <input type="tel" placeholder="Telefone" required>
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Cidade">
-                <input type="number" placeholder="Valor" required>
-                <input type="date" placeholder="Vencimento" required>
-                <div>
-                    <button class="save__client">Salvar</button>
-                    <button class="cancel">Cancelar</button>
-                </div>
+            <form class="form">
+                <input class="name modal__field" type="text" placeholder="Nome" required>
+                <input class="cpf modal__field" type="text" placeholder="CPF">
+                <input class="tel modal__field" type="tel" placeholder="Telefone" required>
+                <input class="email modal__field" type="email" placeholder="Email">
+                <input class="city modal__field" type="text" placeholder="Cidade">
+                <input class="value modal__field" type="number" placeholder="Valor" required>
+                <input class="date modal__field" type="date" placeholder="Vencimento" required>
             </form>
-
+            <div>
+                <button class="save__client">Salvar</button>
+                <button class="cancel">Cancelar</button>
+            </div>
         </section>
 
     </main>
