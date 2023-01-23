@@ -2,62 +2,67 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {}
-
 
 /* HEADER */
 
 
 .header {
     background-color: #d8d8d8;
-    padding: 16px;
+    padding: 1rem;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 /* MAIN */
 
 article {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 55px -34px rgba(0, 0, 0, 0.75);
-    max-width: 1200px;
+    max-width: 1500px;
     width: 95%;
     margin: 0 auto;
     text-align: center;
-    padding: 16px 12px;
+    box-shadow: 0rem 0rem 3.4375rem -2.125rem rgba(0, 0, 0, 0.75);
+    border-radius: 0.5rem;
+    padding: 1rem 0.75rem;
 }
 
 .new__client {
     align-self: flex-start;
-    padding: 16px 12px;
-    margin-bottom: 24px;
+    padding: 1rem 0.75rem;
+    margin-bottom: 1.5rem;
     margin-left: 3%;
-    border-radius: 8px;
+    border-radius: 0.5rem;
+    font-weight: 600;
     cursor: pointer;
     border: none;
-    background-color: #8ff77b;
+    background-color: #7bdef7;
 }
 
 thead th {
-    height: 50px;
-    background-color: #d8d8d8;
-    padding: 8px 20px;
     font-size: 1.2rem;
+    height: 3.125rem;
+    background-color: #d8d8d8;
+    padding: 0.5rem 1.25rem;
 }
 
 tbody td {
-    height: 50px;
-    padding: 20px;
+    height: 3.125rem;
+    padding: 1.25rem;
 }
 
 tbody button {
-    border: none;
-    padding: 8px;
+    font-weight: 600;
     cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
 
 .edit__client {
@@ -66,4 +71,55 @@ tbody button {
 
 .delete__client {
     background-color: #fa4b4b;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: absolute;
+    max-width: 900px;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0rem 0rem 3.4375rem -2.125rem rgba(0, 0, 0, 0.75);
+    background-color: #f0ecec;
+}
+
+.modal__header {
+    background-color: #d8d8d8;
+    padding: 0.75rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 2rem;
+}
+
+form input {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+form button {
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.save__client {
+    background-color: #8ff77b;
+}
+
+.cancel {
+    background-color: #7bdef7;
 }

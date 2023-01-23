@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,7 +49,10 @@
                         <td>Ribeirao Preto</td>
                         <td>R$ 450,90</td>
                         <td>15/02/2023</td>
-                        <td><button class="edit__client">Editar</button> | <button class="delete__client">Excluir</button></td>
+                        <td>
+                            <button class="edit__client">Editar</button> |
+                            <button class="delete__client">Excluir</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Laura</td>
@@ -55,11 +62,35 @@
                         <td>Jacareí</td>
                         <td>R$ 150,90</td>
                         <td>21/10/2023</td>
-                        <td><button class="edit__client">Editar</button> | <button class="delete__client">Excluir</button></td>
+                        <td>
+                            <button class="edit__client">Editar</button> |
+                            <button class="delete__client">Excluir</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </article>
+
+        <section class="modal">
+            <header class="modal__header">
+                <h3>Preenches dados</h3>
+            </header>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="text" placeholder="CPF">
+                <input type="tel" placeholder="Telefone" required>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Cidade">
+                <input type="number" placeholder="Valor" required>
+                <input type="date" placeholder="Vencimento" required>
+                <div>
+                    <button class="save__client">Salvar</button>
+                    <button class="cancel">Cancelar</button>
+                </div>
+            </form>
+
+        </section>
+
     </main>
 
 
