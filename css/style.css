@@ -5,13 +5,20 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {}
+:root {
+    --primary-color: #d8d8d8;
+    --newBtn-color: #4ad5f8;
+    --saveBtn-color: #43eb21;
+    --cancelBtn-color: #d4d4d4;
+    --editBtn-color: #b6dce7;
+    --deleteBtn-color: #f35959;
+}
 
 /* HEADER */
 
 
 .header {
-    background-color: #d8d8d8;
+    background-color: var(--primary-color);
     padding: 1rem;
     text-align: center;
     margin-bottom: 2.5rem;
@@ -47,13 +54,13 @@ article {
     font-weight: 600;
     cursor: pointer;
     border: none;
-    background-color: #7bdef7;
+    background-color: var(--newBtn-color);
 }
 
 thead th {
     font-size: 1.2rem;
     height: 3.125rem;
-    background-color: #d8d8d8;
+    background-color: var(--primary-color);
     padding: 0.5rem 1.25rem;
 }
 
@@ -71,11 +78,11 @@ tbody button {
 }
 
 .edit__client {
-    background-color: #8ff77b;
+    background-color: var(--editBtn-color);
 }
 
 .delete__client {
-    background-color: #fa4b4b;
+    background-color: var(--deleteBtn-color);
 }
 
 /* MODAL */
@@ -94,7 +101,7 @@ tbody button {
 }
 
 .modal__header {
-    background-color: #d8d8d8;
+    background-color: var(--primary-color);
     padding: 0.75rem;
 }
 
@@ -122,9 +129,9 @@ form input {
 }
 
 .save__client {
-    background-color: #8ff77b;
+    background-color: var(--saveBtn-color);
 }
 
 .cancel {
-    background-color: #7bdef7;
+    background-color: var(--cancelBtn-color);
 }
