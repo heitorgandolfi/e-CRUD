@@ -21,8 +21,8 @@ const clientDate = document.querySelector(".date");
 
 // CRUD
 
-const getLocalStorage = () => JSON.parse(localStorage.getItem("client")) ?? [];
 const setLocalStorage = (listClients) => localStorage.setItem("client", JSON.stringify(listClients));
+const getLocalStorage = () => JSON.parse(localStorage.getItem("client")) ?? [];
 
 const deleteClient = (index) => {
     const listClients = readClient();
