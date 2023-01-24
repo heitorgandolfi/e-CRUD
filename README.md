@@ -23,7 +23,7 @@
 
 - Vale ressaltar que, neste último caso, há uma mensagem de confirmação, a fim de evitar eventuais ações equivocadas pelo usuário.
 
-- Por ora, o projeto está funcional somente para telas maiores, vez que a responsividade ainda não foi implementada. 
+:warning: Por ora, o projeto está funcional somente para telas maiores, vez que a responsividade ainda não foi implementada, pois se encontra em desenvolvimento.
 
 <br>
 
