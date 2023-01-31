@@ -1,137 +1,136 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --primary-color: #d8d8d8;
-    --newBtn-color: #4ad5f8;
-    --saveBtn-color: #43eb21;
-    --cancelBtn-color: #d4d4d4;
-    --editBtn-color: #b6dce7;
-    --deleteBtn-color: #f35959;
+  --primary-color: #d8d8d8;
+  --newBtn-color: #4ad5f8;
+  --saveBtn-color: #43eb21;
+  --cancelBtn-color: #d4d4d4;
+  --editBtn-color: #b6dce7;
+  --deleteBtn-color: #f35959;
 }
 
 /* HEADER */
 
-
 .header {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 2.5rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 /* MAIN */
 
 article.active,
 .header.active {
-    filter: blur(5px);
+  filter: blur(5px);
 }
 
 article {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1600px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0rem 0rem 3.4375rem -2.125rem rgba(0, 0, 0, 0.75);
-    border-radius: 0.5rem;
-    padding: 1rem 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0rem 0rem 3.4375rem -2.125rem rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
 }
 
 .new__client {
-    align-self: flex-start;
-    padding: 1rem 0.75rem;
-    margin-bottom: 1.5rem;
-    margin-left: 3%;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    background-color: var(--newBtn-color);
+  align-self: flex-start;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1.5rem;
+  margin-left: 3%;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background-color: var(--newBtn-color);
 }
 
 thead th {
-    font-size: 1.2rem;
-    height: 3.125rem;
-    background-color: var(--primary-color);
-    padding: 0.5rem 1.25rem;
+  font-size: 1.2rem;
+  height: 3.125rem;
+  background-color: var(--primary-color);
+  padding: 0.5rem 1.25rem;
 }
 
 tbody td {
-    height: 3.125rem;
-    padding: 1.25rem;
+  height: 3.125rem;
+  padding: 1.25rem;
 }
 
 tbody button {
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .edit__client {
-    background-color: var(--editBtn-color);
+  background-color: var(--editBtn-color);
 }
 
 .delete__client {
-    background-color: var(--deleteBtn-color);
+  background-color: var(--deleteBtn-color);
 }
 
 /* MODAL */
 
 .modal {
-    display: none;
-    position: absolute;
-    max-width: 900px;
-    width: 95%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    box-shadow: 0rem 0rem 3.4375rem -2.125rem rgba(0, 0, 0, 0.75);
-    background-color: #f0ecec;
+  display: none;
+  position: absolute;
+  max-width: 900px;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0rem 0rem 3.4375rem -2.125rem rgba(0, 0, 0, 0.75);
+  background-color: #f0ecec;
 }
 
 .modal__header {
-    background-color: var(--primary-color);
-    padding: 0.75rem;
+  background-color: var(--primary-color);
+  padding: 0.75rem;
 }
 
 form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 2rem;
 }
 
 form input {
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
 }
 
 .modal div button {
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .save__client {
-    background-color: var(--saveBtn-color);
+  background-color: var(--saveBtn-color);
 }
 
 .cancel {
-    background-color: var(--cancelBtn-color);
+  background-color: var(--cancelBtn-color);
 }
